@@ -60,12 +60,12 @@ def read_data():
     driver.maximize_window()
     time.sleep(5)
 
-    for i in range(100):
+    for i in range(50):
         driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
         time.sleep(0.8)
     time.sleep(1)
 
-    for i in range(1,401):
+    for i in range(1,201):
         new_car = car_properties()
         new_car.read_car(driver,f'//*[@id="__layout"]/div/div[1]/section/div[2]/div[2]/div[{i}]/a')
         if new_car.name == None:
@@ -80,5 +80,6 @@ def read_data():
             continue
         else:
             car_list.append(new_car)
-    
+
+    driver.close()
     return car_list

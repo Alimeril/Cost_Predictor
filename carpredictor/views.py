@@ -32,4 +32,4 @@ def GetCarData(request):
         )
         q.save()
     template = loader.get_template("carpredictor/confirm.html")
-    return HttpResponseRedirect(template.render(request))
+    return HttpResponse(template.render(request))

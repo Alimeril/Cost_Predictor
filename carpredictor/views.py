@@ -31,5 +31,5 @@ def GetCarData(request):
             price = car.price,
         )
         q.save()
-    template = loader.get_template("carpredictor/carlist.html")
+    template = loader.get_template("carpredictor/confirm.html")
     return HttpResponseRedirect(template.render(request))

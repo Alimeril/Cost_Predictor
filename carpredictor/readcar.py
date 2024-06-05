@@ -18,7 +18,7 @@ def read_car_name(driver,path):
             break
     return car_name
 
-class car():
+class car_properties():
     def __init__(self):
         self.name = None
         self.year = None
@@ -66,7 +66,7 @@ def read_data():
     time.sleep(1)
 
     for i in range(1,401):
-        new_car = car()
+        new_car = car_properties()
         new_car.read_car(driver,f'//*[@id="__layout"]/div/div[1]/section/div[2]/div[2]/div[{i}]/a')
         if new_car.name == None:
             continue

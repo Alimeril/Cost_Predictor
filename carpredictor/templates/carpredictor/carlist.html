@@ -6,6 +6,8 @@ List of Cars
 
 {% block content %}
 <h1 class=".container-fluid text-center pt-5">List of Cars</h1>
+<a class="btn btn-success" href = "{% url 'carpredictor:GetCarData' %}" role="button">Get More Data</a><br>
+<h4 class=".container-fluid text-center pt-5">Car List:</h4>
 {% for car in car_list %}
     <div class="card bg-secondary">
         <p class="card-header">{{car.created}}</p>

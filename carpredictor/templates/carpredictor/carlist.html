@@ -9,11 +9,11 @@ List of Cars
 <a class="btn btn-success" href = "{% url 'carpredictor:GetCarData' %}" role="button">Get More Data</a><br>
 <h4 class=".container-fluid text-center pt-5">Cars List:</h4>
 {% for car in car_list %}
-    <div class="card bg-secondary">
+    <div class="card bg-secondary my-3 text-center">
         <p class="card-header">{{car.created}}</p>
         <h4 class="card-title">{{car.name}}</h4>
         <p class="card-text">{{car.year}}, {{car.km}}km, {{car.description}}</p>
-        <p class="card-text"><strong>{{car.price}}</strong></p>
+        <p class="card-text"><strong>{{car.price}} تومان</strong></p>
     </div>
 {% endfor %}
 <div class="pagination">

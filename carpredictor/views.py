@@ -14,7 +14,7 @@ def home(request):
 class CarList(generic.ListView):
     template_name = 'carpredictor/carlist.html'
     context_object_name = 'car_list'
-    paginate_by = 50
+    paginate_by = 100
 
     def get_queryset(self):
         car_list = Car.objects.order_by('created')

@@ -1,0 +1,1 @@
+This Django web application, uses Python Selenium library to extract available cars details from "bama.ir" website and store them in the database. By pushing "Get More Data" button it starts crawling agian and updates its data.
